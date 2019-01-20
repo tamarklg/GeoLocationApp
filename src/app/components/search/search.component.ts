@@ -10,8 +10,8 @@ import { ResultComponent } from '../result/result.component';
 })
 export class SearchComponent implements OnInit {
 
-  source: string = 'ירושלים';
-  destination: string = 'תל אביב';
+  source: string = '';
+  destination: string = '';
 
   constructor(private distanceService: DistanceService,
               private dialog: MatDialog) { }
@@ -37,8 +37,8 @@ export class SearchComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(res => {
-      // this.source = '';
-      // this.destination = '';
+      this.source = '';
+      this.destination = '';
     })
   }
 }

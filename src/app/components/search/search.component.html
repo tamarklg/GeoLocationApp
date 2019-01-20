@@ -1,0 +1,13 @@
+<div class="search" style="direction: rtl">
+  <div>
+      <div>מוצא</div>
+      <input type="text" [(ngModel)]="source" class="source">
+  </div>
+  
+  <div>
+      <div>יעד</div>
+      <input type="text" [(ngModel)]="destination" class="destination">
+  </div>
+
+  <button (click)="searchDistance()"> הצג את המרחק</button>
+</div>

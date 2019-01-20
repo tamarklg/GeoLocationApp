@@ -1,0 +1,44 @@
+<div class="search-result">
+  <div>
+    <button (click)="closeResult()">סיום</button>
+  </div>
+
+  <div class="line">
+    <div class="distance">
+      <div>המרחק בק"מ</div>
+      <div class="text-bold number">{{data.distance | number : '1.0-2'}}</div>
+    </div>
+
+    <hr>
+
+    <div class="most-popular">
+      <div>המרחק הפופולרי ביותר</div>
+      <div class="text-bold number">{{popularSearch?.hits}}</div>
+      <div>
+        <span class="text-bold">{{popularSearch?.source}}</span> | 
+        <span class="text-bold">{{popularSearch?.destination}}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="popular-list-title">רשימת התוצאות הפופולריות</div>
+  <div class="popular-list">
+    <div *ngFor="let search of popularSearchList" class="popular">
+
+      <div class="source">
+        <div>{{search.source}}</div>
+        <div class="text-bold">מוצא</div>
+      </div>
+
+      <div class="destination">
+          <div>{{search.destination}}</div>
+          <div class="text-bold">יעד</div>
+      </div>
+
+      <div class="hits">
+          <div>{{search.hits}}</div>
+          <div class="text-bold">בקשות</div>
+      </div>
+    </div>
+  </div>
+</div>

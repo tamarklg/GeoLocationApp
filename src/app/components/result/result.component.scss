@@ -1,0 +1,82 @@
+$yellow: #FFC000;
+
+.search-result {
+    background-color: #404040;
+    color: white;
+
+    button {
+        background-color: $yellow;
+        color: white;
+        width: 8%;
+        outline: none;
+        border: none;
+        border-radius: 3px;
+        height: 2em;
+    }
+
+    .line, .popular-list, .popular-list-title {
+        direction: rtl;
+        width: 30%;
+        margin: 0 auto;
+    }
+
+    .line {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 30px;
+
+        .distance, .most-popular {
+            display: inline-block;
+        }
+    }
+
+    .popular-list {
+        height: 65vh;
+        overflow: auto;
+
+        .popular {
+            width: 100%;
+
+            > div {
+                display: inline-block;
+                background-color: #353535;
+                padding: 5px 10px;
+                margin: 10px 0;
+
+                &.source {
+                    width: calc(25% - 20px);
+                    border-radius: 0 5px 5px 0;
+                }
+
+                &.destination {
+                    width: calc(63% - 20px);
+                }
+
+                &.hits {
+                    width: calc(12% - 20px);
+                    border-radius: 5px 0 0 5px;
+                }
+
+                .text-bold {
+                    font-size: 0.5em;
+                }
+            }
+        }
+    }
+
+    div, span {
+        &.text-bold {
+            color: $yellow;
+
+            &.number {
+                font-size: 2.5em;
+                padding: 20px 0;
+            }
+        }
+    }
+}
+
+.black-background .mat-dialog-container {
+    background-color: #404040 !important;
+}

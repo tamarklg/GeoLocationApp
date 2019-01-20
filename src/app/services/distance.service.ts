@@ -12,4 +12,12 @@ export class DistanceService {
   getDistance(source, destination): Observable<any> {
     return this.http.get(this.baseUrl + 'distance?source=' + source + '&destination=' + destination);
   }
+
+  getPopularSearch(): Observable<any> {
+    return this.http.get(this.baseUrl + 'distance/popularsearch');
+  }
+
+  getPopularSearchList(): Observable<any> {
+    return this.http.get(this.baseUrl + 'distance/popularsearchlist');
+  }
 }
